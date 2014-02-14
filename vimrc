@@ -40,6 +40,9 @@ nnoremap gj j
 " use space bar as the leader
 let mapleader=" "
 
+" always increment/decrement in decima (07 -> 08) instead of (07 -> 10)
+set nrformats=
+
 " space-m saves and runs make on the command line
 nnoremap <Leader>m :w<CR>:!make<CR>
 
@@ -76,11 +79,11 @@ ab hdlist <ul><CR><li><p><b>!cursor!</b></p><p><CR><CR><CR></p></li><CR><li><p><
 au BufRead,BufNewFile *.go set filetype=go
 
 " use wrapping and spell check on text files
-au BufRead,BufNewFile *.txt set textwidth=80 spell
+au BufRead,BufNewFile *.txt set textwidth=80 spell noai nocindent
 
 " use spell check on HTML and LaTeX
-au BufRead,BufNewFile *.html set spell
-au BufRead,BufNewFile *.tex set spell
+au BufRead,BufNewFile *.html set spell noai nocindent
+au BufRead,BufNewFile *.tex set spell noai nocindent
 
 " make vim jump to last position in file
 if has("autocmd")
