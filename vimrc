@@ -19,9 +19,6 @@ set cindent
 " make vim not expand tabs for Makefiles
 autocmd FileType make set noexpandtab
 
-" use a better shell
-set shell=/bin/zsh
-
 " search incrementally
 set incsearch
 
