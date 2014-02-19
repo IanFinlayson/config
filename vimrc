@@ -41,7 +41,7 @@ let mapleader=" "
 set nrformats=
 
 " space-m saves and runs make on the command line
-nnoremap <Leader>m :w<CR>:!make<CR>
+nnoremap <Leader>m :w<CR>:make<CR>
 
 " space-s toggles spell check
 map <Leader>s :set spell!<CR>
@@ -87,10 +87,6 @@ if has("autocmd")
  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
  \| exe "normal! g'\"" | endif
 endif
-
-" are these needed?
-"let g:syntastic_html_checkers=[]
-"let g:syntastic_tex_checkers=[]
 
 " let matchit know the filetype
 filetype plugin on
