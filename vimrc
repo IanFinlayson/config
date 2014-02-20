@@ -54,23 +54,23 @@ ab tumw The University of Mary Washington
 ab iff Ian Finlayson
 
 " c++ template
-ab cppt <ESC>:set paste<CR>i#include <iostream><CR>using namespace std;<CR><CR>int main( ) {<CR>   !cursor!<CR><CR><CR>    return 0;<CR>}<CR><ESC>:set nopaste<CR>:call search('!cursor!', 'b')<CR>cf!
+ab cppt <ESC>:set paste<CR>i#include <iostream><CR>using namespace std;<CR><CR>int main( ) {<CR>   !cursor!<CR><CR><CR>    return 0;<CR>}<CR><ESC>:set nopaste<CR>?!cursor!<CR>cf!
 
 " java template
-ab javat <ESC>:set paste<CR>ipublic class <C-R>=expand("%:t:r")<CR> {<CR>    public static void main(String args[]) {<CR>       !cursor!<CR><CR><CR>    }<CR>}<CR><ESC>:set nopaste<CR>:call search('!cursor!', 'b')<CR>cf!
+ab javat <ESC>:set paste<CR>ipublic class <C-R>=expand("%:t:r")<CR> {<CR>    public static void main(String args[]) {<CR>       !cursor!<CR><CR><CR>    }<CR>}<CR><ESC>:set nopaste<CR>?!cursor!<CR>cf!
 
 " LaTeX niceties
-ab tlist \begin{itemize}<CR>\item!cursor!<CR>\item <CR>\item <CR>\end{itemize}<ESC>:call search('!cursor!', 'b')<CR>cf!
-ab tenum \begin{enumerate}<CR>\item!cursor!<CR>\item <CR>\item <CR>\end{enumerate}<ESC>:call search('!cursor!', 'b')<CR>cf!
-ab tslide \begin{frame}{!cursor!}\begin{center}<CR><CR>\end{center}\end{frame}<ESC>:call search('!cursor!', 'b')<CR>cf!
-ab tframe \begin{frame}{!cursor!}\begin{center}<CR><CR>\end{center}\end{frame}<ESC>:call search('!cursor!', 'b')<CR>cf!
-ab tblock \begin{block}{!cursor!}<CR>\end{block}<ESC>:call search('!cursor!', 'b')<CR>cf!
+ab tlist \begin{itemize}<CR>\item!cursor!<CR>\item <CR>\item <CR>\end{itemize}<ESC>?!cursor!<CR>cf!
+ab tenum \begin{enumerate}<CR>\item!cursor!<CR>\item <CR>\item <CR>\end{enumerate}<ESC>?!cursor!<CR>cf!
+ab tslide \begin{frame}{!cursor!}\begin{center}<CR><CR>\end{center}\end{frame}<ESC>?!cursor!<CR>cf!
+ab tframe \begin{frame}{!cursor!}\begin{center}<CR><CR>\end{center}\end{frame}<ESC>?!cursor!<CR>cf!
+ab tblock \begin{block}{!cursor!}<CR>\end{block}<ESC>?!cursor!<CR>cf!
 
 " HTML
-ab hul <ul><CR><li>!cursor!</li><CR><li></li><CR><li></li><CR></ul><CR><ESC>:call search('!cursor!', 'b')<CR>cf!
-ab hol <ol><CR><li>!cursor!</li><CR><li></li><CR><li></li><CR></ol><CR><ESC>:call search('!cursor!', 'b')<CR>cf!
-ab hsec <hr /><CR><h3>!cursor!</h3><CR><CR><CR><ESC>:call search('!cursor!', 'b')<CR>cf!
-ab hdlist <ul><CR><li><p><b>!cursor!</b></p><p><CR><CR><CR></p></li><CR><li><p><b></b></p><p><CR><CR><CR></p></li><CR><li><p><b></b></p><p><CR><CR><CR></p></li></ul><CR><ESC>:call search('!cursor!', 'b')<CR>cf!
+ab hul <ul><CR><li>!cursor!</li><CR><li></li><CR><li></li><CR></ul><CR><ESC>?!cursor!<CR>cf!
+ab hol <ol><CR><li>!cursor!</li><CR><li></li><CR><li></li><CR></ol><CR><ESC>?!cursor!<CR>cf!
+ab hsec <hr /><CR><h3>!cursor!</h3><CR><CR><CR><ESC>?!cursor!<CR>cf!
+ab hdlist <ul><CR><li><p><b>!cursor!</b></p><p><CR><CR><CR></p></li><CR><li><p><b></b></p><p><CR><CR><CR></p></li><CR><li><p><b></b></p><p><CR><CR><CR></p></li></ul><CR><ESC>?!cursor!<CR>cf!
 
 " syntax files
 au BufRead,BufNewFile *.go set filetype=go
