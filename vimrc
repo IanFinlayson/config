@@ -41,13 +41,13 @@ let mapleader=" "
 set nrformats=
 
 " space-m saves and runs make on the command line
-nnoremap <Leader>m :w<CR>:make<CR>
+nmap <Leader>m :w<CR>:make<CR>
 
 " space-s toggles spell check
-map <Leader>s :set spell!<CR>
+nmap <Leader>s :set spell!<CR>
 
 " space-p toggles copy/paste mode
-map <Leader>p :set paste!<CR>:set number!<CR>
+nmap <Leader>p :set paste!<CR>:set number!<CR>
 
 " abbreviations
 ab tumw The University of Mary Washington
