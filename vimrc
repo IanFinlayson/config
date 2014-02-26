@@ -72,6 +72,7 @@ ab tenum \begin{enumerate}<CR>\item!cursor!<CR>\item <CR>\item <CR>\end{enumerat
 ab tslide \begin{frame}{!cursor!}\begin{center}<CR><CR>\end{center}\end{frame}<ESC>?!cursor!<CR>cf!<C-R>=Eatchar('\s')<CR>
 ab tframe \begin{frame}{!cursor!}\begin{center}<CR><CR>\end{center}\end{frame}<ESC>?!cursor!<CR>cf!<C-R>=Eatchar('\s')<CR>
 ab tblock \begin{block}{!cursor!}<CR>\end{block}<ESC>?!cursor!<CR>cf!<C-R>=Eatchar('\s')<CR>
+ab tverb \begin{verbatim}<CR>!cursor!<CR>\end{verbatim}<ESC>?!cursor!<CR>cf!<C-R>=Eatchar('\s')<CR>
 
 " HTML
 ab hul <ul><CR><li>!cursor!</li><CR><li></li><CR><li></li><CR></ul><CR><ESC>?!cursor!<CR>cf!<C-R>=Eatchar('\s')<CR>
