@@ -41,6 +41,16 @@ nnoremap gk k
 nnoremap j gj
 nnoremap gj j
 
+" disable arrow keys
+nnoremap <Up> <NOP>
+nnoremap <Down> <NOP>
+nnoremap <Left> <NOP>
+nnoremap <Right> <NOP>
+inoremap <Up> <NOP>
+inoremap <Down> <NOP>
+inoremap <Left> <NOP>
+inoremap <Right> <NOP>
+
 " use space bar as the leader
 let mapleader=" "
 
