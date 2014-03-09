@@ -100,6 +100,9 @@ au BufRead,BufNewFile *.txt set textwidth=80 spell noai nocindent
 au BufRead,BufNewFile *.html set spell noai nocindent
 au BufRead,BufNewFile *.tex set spell noai nocindent
 
+" don't use C indenting for Python, it's awful
+au BufRead,BufNewFile *.py set autoindent nocindent
+
 " make vim jump to last position in file
 if has("autocmd")
  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
