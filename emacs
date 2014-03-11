@@ -6,14 +6,7 @@
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
 ; load a nice color scheme
-; I use a solarized terminal in 16-color mode,
-; so this really only changes the mappings
-;(require 'color-theme)
-;(color-theme-initialize)
-;(color-theme-robin-hood)
-;(require 'solarized-dark-theme)
 (load-theme 'solarized-dark t)
-
 
 ; make emacs save backups in a central place
 (setq backup-directory-alist `(("." . "~/.saves")))
@@ -37,4 +30,6 @@
 (setq inhibit-startup-echo-area-message t)
 (setq inhibit-startup-message t)
 
+; make emacs follow symlinks
+(setq vc-follow-symlinks nil)
 
