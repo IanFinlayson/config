@@ -17,7 +17,7 @@ bindkey '^[OF' end-of-line
 bindkey "^[[3~" delete-char
 
 # basics
-export EDITOR=vim
+export EDITOR='emacs -nw'
 export SHELL='/bin/zsh'
 export PROMPT='[%n@%m %c]$ '
 
@@ -59,8 +59,9 @@ alias evince='evince 1>/dev/null 2>/dev/null'
 # make dia use only one window
 alias dia='dia --integrated'
 
-# edit my TODO list quickly
-alias todo='vim scp://rosemary.umw.edu/~/TODO'
+# never use a dumb window
+alias emacs='emacs -nw'
+alias e='emacs -nw'
 
 # always print two-sided
 alias lpr='lpr -o sides=two-sided-long-edge'
@@ -71,5 +72,5 @@ export GOPATH=~/godev
 
 # make colors nice
 eval `dircolors ~/.dircolors`
-export TERM='xterm-256color'
+export TERM='xterm'
 

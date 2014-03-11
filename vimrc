@@ -11,8 +11,8 @@ endfunc
 set number
 set cursorline
 set background=dark
-colorscheme solarized
 syntax on
+colorscheme default
 
 " don't worry about old vi cruft
 set nocompatible
