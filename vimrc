@@ -117,9 +117,6 @@ endif
 " let matchit know the filetype
 filetype plugin on
 
-ab lb \textbf{<BS>
-
-
 " disable syntastic for Latex
 let g:syntastic_tex_checkers=[]
 
