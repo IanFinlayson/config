@@ -5,6 +5,9 @@
 (package-initialize)
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
+; make emacs follow symlinks
+(setq vc-follow-symlinks nil)
+
 ; load a nice color scheme
 (load-theme 'solarized-dark t)
 
@@ -30,6 +33,5 @@
 (setq inhibit-startup-echo-area-message t)
 (setq inhibit-startup-message t)
 
-; make emacs follow symlinks
-(setq vc-follow-symlinks nil)
-
+; make emacs accept one letter answers and like it
+(defalias 'yes-or-no-p 'y-or-n-p)
