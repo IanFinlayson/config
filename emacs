@@ -10,6 +10,7 @@
 
 ; make emacs save backups in a central place
 (setq backup-directory-alist `(("." . "~/.saves")))
+(setq auto-save-file-name-transforms `((".*" "~/.saves" t)))
 (setq backup-by-copying t)
 
 ; turn on Vim emulation!
@@ -32,4 +33,12 @@
 
 ; make emacs follow symlinks
 (setq vc-follow-symlinks nil)
+
+; use a sane indentation for C code
+(setq c-default-style "k&r" c-basic-offset 4)
+
+; make emacs start where I left off
+(setq save-place-file "~/.emacsinfo")
+(setq-default save-place t)
+(require 'saveplace)
 

@@ -60,14 +60,14 @@ alias evince='evince 1>/dev/null 2>/dev/null'
 alias dia='dia --integrated'
 
 # never use a dumb window
-alias emacs='emacs -nw'
-alias e='emacs -nw'
+alias emacs='~/local/bin/emacs -nw'
+alias e='~/local/bin/emacs -nw'
 
 # always print two-sided
 alias lpr='lpr -o sides=two-sided-long-edge'
 
 # add scripts, Haskell and Go programs, and "." to path
-export PATH=~/bin:$PATH::~/.cabal/bin:/usr/local/go/bin:.
+export PATH=~/bin:~/local/bin:$PATH:~/.cabal/bin:/usr/local/go/bin:.
 export GOPATH=~/godev
 
 # make colors nice
