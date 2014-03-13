@@ -48,3 +48,11 @@
 (setq-default save-place t)
 (require 'saveplace)
 
+; make the tab key complete if at end of a word
+(require 'smart-tab)
+(global-smart-tab-mode 1)
+
+; expand tabs into spaces!
+(setq indent-tabs-mode nil)
+(setq-default indent-tabs-mode nil)
+
