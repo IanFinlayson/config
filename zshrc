@@ -60,8 +60,8 @@ alias evince='evince 1>/dev/null 2>/dev/null'
 alias dia='dia --integrated'
 
 # never use a dumb window
-alias emacs='~/local/bin/emacs -nw'
-alias e='~/local/bin/emacs -nw'
+alias emacs='emacs -nw'
+alias e='emacs -nw'
 
 # always print two-sided
 alias lpr='lpr -o sides=two-sided-long-edge'
