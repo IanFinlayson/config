@@ -70,6 +70,9 @@ alias lpr='lpr -o sides=two-sided-long-edge'
 export PATH=~/bin:~/local/bin:$PATH:~/.cabal/bin:/usr/local/go/bin:.
 export GOPATH=~/godev
 
+# search local lib for libraries (why is this not default?)
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+
 # make colors nice
 eval `dircolors ~/.dircolors`
 export TERM='xterm'

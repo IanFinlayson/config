@@ -56,3 +56,9 @@
 (setq indent-tabs-mode nil)
 (setq-default indent-tabs-mode nil)
 
+; setup SLIME
+(require 'slime-autoloads)
+(setq inferior-lisp-program "/usr/bin/sbcl")
+
+
+
