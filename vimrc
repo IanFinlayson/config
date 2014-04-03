@@ -1,7 +1,6 @@
 " Ian Finlayson's .vimrc
 
 " used for removing trailing space from abbreviations
-" TODO: figure out how the heck this works!
 func Eatchar(pat)
    let c = nr2char(getchar(0))
    return (c =~ a:pat) ? '' : c
@@ -12,7 +11,7 @@ set number
 set cursorline
 set background=dark
 syntax on
-colorscheme default
+colorscheme ians
 
 " don't worry about old vi cruft
 set nocompatible
@@ -40,16 +39,6 @@ nnoremap k gk
 nnoremap gk k
 nnoremap j gj
 nnoremap gj j
-
-" disable arrow keys
-"nnoremap <Up> <NOP>
-"nnoremap <Down> <NOP>
-"nnoremap <Left> <NOP>
-"nnoremap <Right> <NOP>
-"inoremap <Up> <NOP>
-"inoremap <Down> <NOP>
-"inoremap <Left> <NOP>
-"inoremap <Right> <NOP>
 
 " use space bar as the leader
 let mapleader=" "
