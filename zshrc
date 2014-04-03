@@ -17,7 +17,7 @@ bindkey '^[OF' end-of-line
 bindkey "^[[3~" delete-char
 
 # basics
-export EDITOR='emacs -nw'
+export EDITOR='vim'
 export SHELL='/bin/zsh'
 export PROMPT='[%n@%m %c]$ '
 
@@ -58,10 +58,6 @@ alias evince='evince 1>/dev/null 2>/dev/null'
 
 # make dia use only one window
 alias dia='dia --integrated'
-
-# never use a dumb window
-alias emacs='emacs -nw'
-alias e='emacs -nw'
 
 # always print two-sided
 alias lpr='lpr -o sides=two-sided-long-edge'
