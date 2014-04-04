@@ -11,6 +11,7 @@ endif
 
 let colors_name="ians"
 
+
 " Basic ui stuff
 hi Cursor              ctermfg=7     ctermbg=1
 hi CursorLine          ctermbg=0     cterm=NONE

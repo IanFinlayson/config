@@ -58,6 +58,7 @@ nmap <Leader>p :set paste!<CR>:set number!<CR>
 " abbreviations
 ab tumw The University of Mary Washington
 ab iff Ian Finlayson
+ab \l λ
 
 " c++ template
 ab cppt <ESC>:set paste<CR>i#include <iostream><CR>using namespace std;<CR><CR>int main( ) {<CR>   !cursor!<CR><CR><CR>    return 0;<CR>}<CR><ESC>:set nopaste<CR>?!cursor!<CR>cf!
@@ -80,12 +81,9 @@ ab hsec <hr /><CR><h3>!cursor!</h3><CR><CR><CR><ESC>?!cursor!<CR>cf!<C-R>=Eatcha
 ab hdlist <ul><CR><li><p><b>!cursor!</b></p><p><CR><CR><CR></p></li><CR><li><p><b></b></p><p><CR><CR><CR></p></li><CR><li><p><b></b></p><p><CR><CR><CR></p></li></ul><CR><ESC>?!cursor!<CR>cf!<C-R>=Eatchar('\s')<CR>
 
 
-hi clear SpellBad
-hi SpellBad cterm=underline
-
-
 " syntax files
 au BufRead,BufNewFile *.go set filetype=go
+au BufRead,BufNewFile *.rkt,*.rktl  set filetype=racket
 
 " use wrapping and spell check on text files
 au BufRead,BufNewFile *.txt set textwidth=80 spell noai nocindent
