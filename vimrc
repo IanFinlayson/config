@@ -106,6 +106,10 @@ filetype plugin on
 " disable syntastic for Latex
 let g:syntastic_tex_checkers=[]
 
+" turn off paredit in slimv
+" TODO try this again and see if it's worth getting used to.
+let g:paredit_mode=0
+
 " setup pathogen bundler
 call pathogen#infect()
 
