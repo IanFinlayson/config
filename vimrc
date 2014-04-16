@@ -60,6 +60,13 @@ ab tumw The University of Mary Washington
 ab iff Ian Finlayson
 ab \l λ
 
+" easier window switching
+map <C-h> <C-W>h
+map <C-l> <C-W>l
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-n> <C-W>w
+
 " c++ template
 ab cppt <ESC>:set paste<CR>i#include <iostream><CR>using namespace std;<CR><CR>int main( ) {<CR>   !cursor!<CR><CR><CR>    return 0;<CR>}<CR><ESC>:set nopaste<CR>?!cursor!<CR>cf!
 
