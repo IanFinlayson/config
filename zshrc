@@ -63,7 +63,7 @@ alias dia='dia --integrated'
 alias lpr='lpr -o sides=two-sided-long-edge'
 
 # add scripts, Haskell and Go programs, and "." to path
-export PATH=~/bin:~/local/bin:$PATH:~/.cabal/bin:/usr/local/go/bin:.
+export PATH=~/bin:~/local/bin:$PATH:~/.cabal/bin:/usr/local/go/bin:~/.local/bin:.
 export GOPATH=~/godev
 
 # search local lib for libraries (why is this not default?)
