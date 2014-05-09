@@ -120,3 +120,5 @@ let g:paredit_mode=0
 " setup pathogen bundler
 call pathogen#infect()
 
+" start centered on screen
+autocmd VimEnter * :normal zz
