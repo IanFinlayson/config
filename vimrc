@@ -17,8 +17,8 @@ colorscheme ians
 set nocompatible
 
 " tab options
-set ts=4
-set sw=4
+set ts=2
+set sw=2
 set expandtab
 set cindent
 
@@ -120,3 +120,5 @@ let g:paredit_mode=0
 " setup pathogen bundler
 call pathogen#infect()
 
+" start centered on screen
+autocmd VimEnter * :normal zz
