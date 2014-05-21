@@ -58,7 +58,6 @@ nmap <Leader>p :set paste!<CR>:set number!<CR>
 " abbreviations
 ab tumw The University of Mary Washington
 ab iff Ian Finlayson
-ab \l λ
 
 " easier window switching
 map <C-h> <C-W>h
@@ -90,13 +89,15 @@ ab hdlist <ul><CR><li><p><b>!cursor!</b></p><p><CR><CR><CR></p></li><CR><li><p><
 " syntax files
 au BufRead,BufNewFile *.go set filetype=go
 au BufRead,BufNewFile *.rkt,*.rktl  set filetype=racket
+au BufRead,BufNewFile *.ttr set filetype=tetra
 
 " use wrapping and spell check on text files
 au BufRead,BufNewFile *.txt set textwidth=80 spell noai nocindent
 
-" use spell check on HTML and LaTeX
+" use spell check on HTML, mark down, and LaTeX
 au BufRead,BufNewFile *.html set spell noai nocindent
 au BufRead,BufNewFile *.tex set spell noai nocindent
+au BufRead,BufNewFile *.md set spell noai nocindent
 
 " don't use C indenting for Python, it's awful
 au BufRead,BufNewFile *.py set autoindent nocindent
@@ -114,7 +115,6 @@ filetype plugin on
 let g:syntastic_tex_checkers=[]
 
 " turn off paredit in slimv
-" TODO try this again and see if it's worth getting used to.
 let g:paredit_mode=0
 
 " setup pathogen bundler
@@ -122,3 +122,4 @@ call pathogen#infect()
 
 " start centered on screen
 autocmd VimEnter * :normal zz
+

@@ -60,10 +60,10 @@ hi PmenuSBar           ctermbg=8
 hi PmenuSel            ctermfg=0     ctermbg=4
 
 " Spelling stuff
-hi SpellBad            ctermfg=1   cterm=underline  ctermbg=NONE
-hi SpellCap            ctermfg=7   ctermbg=NONE
-hi SpellRare           ctermfg=7   ctermbg=NONE
-hi SpellLocal          ctermfg=1   cterm=underline  ctermbg=NONE
+hi SpellBad            ctermfg=1    cterm=underline  ctermbg=NONE
+hi SpellCap            ctermfg=None ctermbg=NONE
+hi SpellRare           ctermfg=7    ctermbg=NONE
+hi SpellLocal          ctermfg=1    cterm=underline  ctermbg=NONE
 hi NonText             ctermfg=7
 
 
@@ -83,7 +83,7 @@ hi Number          ctermfg=6
 hi Boolean         ctermfg=6
 hi Special         ctermfg=6
 hi Ignore          ctermfg=0
-hi! link Operator  Delimiter
+hi Operator        ctermfg=4
 hi! link PreProc   Keyword
 hi! link Error     ErrorMsg
 
