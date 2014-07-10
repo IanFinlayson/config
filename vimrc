@@ -114,6 +114,9 @@ filetype plugin on
 " disable syntastic for Latex
 let g:syntastic_tex_checkers=[]
 
+" tell syntastic where more include files are...
+let g:syntastic_c_include_dirs = [ '/usr/include/guile/2.0/' ]
+
 " turn off paredit in slimv
 let g:paredit_mode=0
 
