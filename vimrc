@@ -97,7 +97,7 @@ au BufRead,BufNewFile *.txt set textwidth=80 spell noai nocindent
 " use spell check on HTML, mark down, and LaTeX
 au BufRead,BufNewFile *.html set spell noai nocindent
 au BufRead,BufNewFile *.tex set spell noai nocindent
-au BufRead,BufNewFile *.md set spell noai nocindent
+au BufRead,BufNewFile *.md set textwidth=80 spell noai nocindent
 
 " don't use C indenting for Python, it's awful
 au BufRead,BufNewFile *.py set autoindent nocindent
@@ -116,6 +116,8 @@ let g:syntastic_tex_checkers=[]
 
 " turn off paredit in slimv
 let g:paredit_mode=0
+
+let g:slimv_disable_scheme=1
 
 " setup pathogen bundler
 call pathogen#infect()
