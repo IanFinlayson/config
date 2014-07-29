@@ -67,7 +67,7 @@ map <C-k> <C-W>k
 map <C-n> <C-W>w
 
 " c++ template
-ab cppt <ESC>:set paste<CR>i#include <iostream><CR>using namespace std;<CR><CR>int main( ) {<CR>   !cursor!<CR><CR><CR>    return 0;<CR>}<CR><ESC>:set nopaste<CR>?!cursor!<CR>cf!
+ab cppt <ESC>:set paste<CR>i#include <iostream><CR>using namespace std;<CR><CR>int main( ) {<CR> !cursor!<CR><CR><CR>  return 0;<CR>}<CR><ESC>:set nopaste<CR>?!cursor!<CR>cf!
 
 " java template
 ab javat <ESC>:set paste<CR>ipublic class <C-R>=expand("%:t:r")<CR> {<CR>    public static void main(String args[]) {<CR>       !cursor!<CR><CR><CR>    }<CR>}<CR><ESC>:set nopaste<CR>?!cursor!<CR>cf!
