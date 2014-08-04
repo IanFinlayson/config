@@ -50,7 +50,7 @@ alias o='xdg-open'
 alias grep='grep --color=always'
 
 # my tasks program
-alias vtasks='python ~/vtasks/vtasks.py'
+alias vtasks='python2 ~/vtasks/vtasks.py'
 
 # go to machines I use a lot
 alias rose='ssh rosemary.umw.edu'
