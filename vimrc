@@ -2,9 +2,19 @@
 
 " used for removing trailing space from abbreviations
 func Eatchar(pat)
-   let c = nr2char(getchar(0))
-   return (c =~ a:pat) ? '' : c
+  let c = nr2char(getchar(0))
+  return (c =~ a:pat) ? '' : c
 endfunc
+
+" used to see what syntax type the thing under the cursor is
+" this is handy for seeing how I want to change my highlights
+function! SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
 
 " prettify
 set number
