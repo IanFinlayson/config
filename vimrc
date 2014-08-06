@@ -67,7 +67,7 @@ map <C-k> <C-W>k
 map <C-n> <C-W>w
 
 " c++ template
-ab cppt <ESC>:set paste<CR>i#include <iostream><CR>using namespace std;<CR><CR>int main( ) {<CR>   !cursor!<CR><CR><CR>    return 0;<CR>}<CR><ESC>:set nopaste<CR>?!cursor!<CR>cf!
+ab cppt <ESC>:set paste<CR>i#include <iostream><CR>using namespace std;<CR><CR>int main( ) {<CR> !cursor!<CR><CR><CR>  return 0;<CR>}<CR><ESC>:set nopaste<CR>?!cursor!<CR>cf!
 
 " java template
 ab javat <ESC>:set paste<CR>ipublic class <C-R>=expand("%:t:r")<CR> {<CR>    public static void main(String args[]) {<CR>       !cursor!<CR><CR><CR>    }<CR>}<CR><ESC>:set nopaste<CR>?!cursor!<CR>cf!
@@ -97,7 +97,7 @@ au BufRead,BufNewFile *.txt set textwidth=80 spell noai nocindent
 " use spell check on HTML, mark down, and LaTeX
 au BufRead,BufNewFile *.html set spell noai nocindent
 au BufRead,BufNewFile *.tex set spell noai nocindent
-au BufRead,BufNewFile *.md set spell noai nocindent
+au BufRead,BufNewFile *.md set textwidth=80 spell noai nocindent
 
 " don't use C indenting for Python, it's awful
 au BufRead,BufNewFile *.py set autoindent nocindent
@@ -114,8 +114,13 @@ filetype plugin on
 " disable syntastic for Latex
 let g:syntastic_tex_checkers=[]
 
+" tell syntastic where more include files are...
+let g:syntastic_c_include_dirs = [ '/usr/include/guile/2.0/' ]
+
 " turn off paredit in slimv
 let g:paredit_mode=0
+
+let g:slimv_disable_scheme=1
 
 " setup pathogen bundler
 call pathogen#infect()

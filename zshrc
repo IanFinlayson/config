@@ -49,6 +49,9 @@ alias o='xdg-open'
 # always color grep results
 alias grep='grep --color=always'
 
+# my tasks program
+alias vtasks='python2 ~/vtasks/vtasks.py'
+
 # go to machines I use a lot
 alias rose='ssh rosemary.umw.edu'
 alias cin='ssh cinnamon.umw.edu'
