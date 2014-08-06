@@ -13,6 +13,12 @@ font pango:Terminus 11
 # launch feh to show wallpaper
 exec --no-startup-id feh --bg-scale /home/finlayson/imgs/f18.png
 
+# launch clipboard manager
+exec --no-startup-id parcellite
+
+# launch screensaver
+exec --no-startup-id xscreensaver -no-splash
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -21,6 +27,9 @@ bindsym $mod+Return exec i3-sensible-terminal
 
 # start chrome 
 bindsym $mod+b exec google-chrome-stable
+
+# start file manager 
+bindsym $mod+m exec pcmanfm
 
 # kill focused window
 bindsym $mod+c kill
@@ -106,7 +115,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # lock the screen
-
+bindsym $mod+z exec xscreensaver-command -lock
 
 # exit i3 without prompt
 bindsym $mod+Shift+e exec i3-msg exit
@@ -118,10 +127,10 @@ mode "resize" {
     # Pressing right will grow the window’s width.
     # Pressing up will shrink the window’s height.
     # Pressing down will grow the window’s height.
-    bindsym j resize shrink width 10 px or 10 ppt
-    bindsym k resize grow height 10 px or 10 ppt
-    bindsym l resize shrink height 10 px or 10 ppt
-    bindsym semicolon resize grow width 10 px or 10 ppt
+    bindsym h resize shrink width 10 px or 10 ppt
+    bindsym j resize grow height 10 px or 10 ppt
+    bindsym k resize shrink height 10 px or 10 ppt
+    bindsym l resize grow width 10 px or 10 ppt
 
     # same bindings, but for the arrow keys
     bindsym Left resize shrink width 10 px or 10 ppt
@@ -145,7 +154,6 @@ bar {
     workspace_buttons yes
     colors {
         background #000000
-        statusline #ffff00
 
         focused_workspace  #ffffff #1793d0
         active_workspace   #ffffff #333333
