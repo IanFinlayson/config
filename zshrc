@@ -43,6 +43,9 @@ alias gcc='gcc -W -Wall -g'
 # show more history
 alias history='history 1'
 
+# a shorter command to launch emacs
+alias e='emacs'
+
 # open any file on the command line with the program that makes sense
 alias o='xdg-open'
 
