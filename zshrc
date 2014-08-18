@@ -92,4 +92,6 @@ fancy-ctrl-z () {
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
+# add spire to the python path
+export PYTHONPATH=/home/finlayson/spire
 

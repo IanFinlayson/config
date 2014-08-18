@@ -27,8 +27,8 @@ colorscheme ians
 set nocompatible
 
 " tab options
-set ts=2
-set sw=2
+set ts=4
+set sw=4
 set expandtab
 set cindent
 
