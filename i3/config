@@ -8,7 +8,7 @@ client.focused #1793d0 #1793d0 #111111
 set $mod Mod4
 
 # use terminus for the window titles and status bar
-font pango:Terminus 11
+font pango:Terminus 12
 
 # launch feh to show wallpaper
 exec --no-startup-id feh --bg-scale /home/finlayson/imgs/f18.png
