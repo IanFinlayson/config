@@ -66,7 +66,6 @@ hi SpellRare           ctermfg=7    ctermbg=NONE
 hi SpellLocal          ctermfg=1    cterm=underline  ctermbg=NONE
 hi NonText             ctermfg=7
 
-
 " main programming like stuff here
 hi Delimiter       ctermfg=7
 hi Comment         ctermfg=2
@@ -86,4 +85,9 @@ hi Ignore          ctermfg=0
 hi Operator        ctermfg=4
 hi! link PreProc   Keyword
 hi! link Error     ErrorMsg
+
+" HTML stuff
+hi htmlTag      ctermfg=4
+hi htmlEndTag   ctermfg=4
+hi htmlLink     ctermfg=7 cterm=underline
 

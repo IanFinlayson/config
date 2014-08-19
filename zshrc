@@ -43,6 +43,9 @@ alias gcc='gcc -W -Wall -g'
 # show more history
 alias history='history 1'
 
+# a shorter command to launch emacs
+alias e='emacs'
+
 # open any file on the command line with the program that makes sense
 alias o='xdg-open'
 
@@ -50,7 +53,7 @@ alias o='xdg-open'
 alias grep='grep --color=always'
 
 # my tasks program
-alias vtasks='python ~/vtasks/vtasks.py'
+alias vtasks='python2 ~/vtasks/vtasks.py'
 
 # go to machines I use a lot
 alias rose='ssh rosemary.umw.edu'
@@ -89,4 +92,6 @@ fancy-ctrl-z () {
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
+# add spire to the python path
+export PYTHONPATH=/home/finlayson/spire
 

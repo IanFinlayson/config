@@ -2,9 +2,19 @@
 
 " used for removing trailing space from abbreviations
 func Eatchar(pat)
-   let c = nr2char(getchar(0))
-   return (c =~ a:pat) ? '' : c
+  let c = nr2char(getchar(0))
+  return (c =~ a:pat) ? '' : c
 endfunc
+
+" used to see what syntax type the thing under the cursor is
+" this is handy for seeing how I want to change my highlights
+function! SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+
 
 " prettify
 set number
@@ -67,7 +77,7 @@ map <C-k> <C-W>k
 map <C-n> <C-W>w
 
 " c++ template
-ab cppt <ESC>:set paste<CR>i#include <iostream><CR>using namespace std;<CR><CR>int main( ) {<CR>   !cursor!<CR><CR><CR>    return 0;<CR>}<CR><ESC>:set nopaste<CR>?!cursor!<CR>cf!
+ab cppt <ESC>:set paste<CR>i#include <iostream><CR>using namespace std;<CR><CR>int main( ) {<CR> !cursor!<CR><CR><CR>  return 0;<CR>}<CR><ESC>:set nopaste<CR>?!cursor!<CR>cf!
 
 " java template
 ab javat <ESC>:set paste<CR>ipublic class <C-R>=expand("%:t:r")<CR> {<CR>    public static void main(String args[]) {<CR>       !cursor!<CR><CR><CR>    }<CR>}<CR><ESC>:set nopaste<CR>?!cursor!<CR>cf!
