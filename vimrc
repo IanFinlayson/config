@@ -17,8 +17,8 @@ colorscheme ians
 set nocompatible
 
 " tab options
-set ts=2
-set sw=2
+set ts=4
+set sw=4
 set expandtab
 set cindent
 
@@ -115,7 +115,7 @@ filetype plugin on
 let g:syntastic_tex_checkers=[]
 
 " tell syntastic where more include files are...
-let g:syntastic_c_include_dirs = [ '/usr/include/guile/2.0/' ]
+let g:syntastic_c_include_dirs = [ '/usr/include/guile/2.0/', '/usr/include/python3.4m/' ]
 
 " turn off paredit in slimv
 let g:paredit_mode=0
