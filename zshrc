@@ -95,3 +95,6 @@ bindkey '^Z' fancy-ctrl-z
 # add spire to the python path
 export PYTHONPATH=/home/finlayson/spire
 
+# add emacs custom install to path
+export PATH=/home/finlayson/source/emacs-24.3/src:$PATH
+

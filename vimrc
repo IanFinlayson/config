@@ -105,7 +105,8 @@ au BufRead,BufNewFile *.ttr set filetype=tetra
 au BufRead,BufNewFile *.txt set textwidth=80 spell noai nocindent
 
 " use spell check on HTML, mark down, and LaTeX
-au BufRead,BufNewFile *.html set spell noai nocindent
+au BufRead,BufNewFile *.html set spell noai nocindent inde=
+au BufRead,BufNewFile *.html NoMatchParen
 au BufRead,BufNewFile *.tex set spell noai nocindent
 au BufRead,BufNewFile *.md set textwidth=80 spell noai nocindent
 
@@ -117,9 +118,6 @@ if has("autocmd")
  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
  \| exe "normal! g'\"" | endif
 endif
-
-" let matchit know the filetype
-filetype plugin on
 
 " disable syntastic for Latex
 let g:syntastic_tex_checkers=[]
@@ -137,4 +135,5 @@ call pathogen#infect()
 
 " start centered on screen
 autocmd VimEnter * :normal zz
+
 
