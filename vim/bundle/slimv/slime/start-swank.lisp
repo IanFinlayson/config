@@ -8,8 +8,8 @@
 ;;; 6.2 section of the Slime user manual.
 ;;;
 ;;; Modified for Slimv:
-;;; - load contribs
 ;;; - don't close connection
+;;; - pass swank port in environment variable
 
 (load (merge-pathnames "swank-loader.lisp" *load-truename*))
 
@@ -30,6 +30,7 @@
     #+ECL (si:getenv name)
     #+SBCL (sb-unix::posix-getenv name)
     #+LISPWORKS (lispworks:environment-variable name)
+    #+CCL (ccl::getenv name)
     default))
 
 (swank:create-server :port (parse-integer (my-getenv "SWANK_PORT" "4005"))
