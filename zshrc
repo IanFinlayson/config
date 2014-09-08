@@ -47,7 +47,7 @@ alias history='history 1'
 alias e='emacs'
 
 # open any file on the command line with the program that makes sense
-alias o='xdg-open'
+alias o='kde-open'
 
 # always color grep results
 alias grep='grep --color=always'
@@ -92,9 +92,9 @@ fancy-ctrl-z () {
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
-# add spire to the python path
-export PYTHONPATH=/home/finlayson/spire
-
 # add emacs custom install to path
 export PATH=/home/finlayson/source/emacs-24.3/src:$PATH
+
+# set android home
+export ANDROID_HOME="/home/finlayson/sources/android-sdk-linux/"
 

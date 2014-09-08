@@ -37,6 +37,9 @@ bindsym $mod+c kill
 # take a screenshot
 bindsym $mod+Print exec ksnapshot
 
+# kill a window
+bindsym $mod+BackSpace exec xkill
+
 # use the version of dmenu that only looks at actual .desktop files
 bindsym $mod+p exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -sb '#1793d0' -fn '-xos4-terminus-medium-r-*-*-21-*'"
 
