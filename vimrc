@@ -44,12 +44,6 @@ set hlsearch
 " make enter clear the past search
 nnoremap <CR> :noh<CR><CR>
 
-" make up and down go by visual lines by default
-nnoremap k gk
-nnoremap gk k
-nnoremap j gj
-nnoremap gj j
-
 " use space bar as the leader
 let mapleader=" "
 
