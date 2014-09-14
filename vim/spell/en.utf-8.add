@@ -86,3 +86,6 @@ GPU
 Jepson
 Trinkle
 WiFi
+mutex
+y
+Pthreads
