@@ -27,7 +27,7 @@ alias ll='ls -l'
 alias la='ls -a'
 
 # always allow X over ssh
-alias ssh='ssh -X'
+alias ssh='ssh -Y'
 
 # I like a clear screen
 alias l='clear;pwd;ls'
