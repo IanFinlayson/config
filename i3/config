@@ -13,9 +13,6 @@ font pango:Terminus 12
 # launch feh to show wallpaper
 exec --no-startup-id feh --bg-scale /home/finlayson/imgs/f18.png
 
-# launch clipboard manager
-exec --no-startup-id parcellite
-
 # launch screensaver
 exec --no-startup-id xscreensaver -no-splash
 
@@ -37,11 +34,8 @@ bindsym $mod+c kill
 # take a screenshot
 bindsym $mod+Print exec ksnapshot
 
-# kill a window
-bindsym $mod+BackSpace exec xkill
-
-# use the version of dmenu that only looks at actual .desktop files
-bindsym $mod+p exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -sb '#1793d0' -fn '-xos4-terminus-medium-r-*-*-21-*'"
+# launch dmenu launcher
+bindsym $mod+p exec dmenu_run -i -nb '#000000' -sb '#1792d0' -fn '-xos4-terminus-medium-r-*-*-18-*'
 
 # change focus - use correct Vim keys!
 bindsym $mod+h focus left
@@ -160,7 +154,6 @@ bar {
     workspace_buttons yes
     colors {
         background #000000
-
         focused_workspace  #ffffff #1793d0
         active_workspace   #ffffff #333333
         inactive_workspace #888888 #222222
