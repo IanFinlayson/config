@@ -16,7 +16,7 @@ hi Cursor              ctermfg=7     ctermbg=1
 hi CursorLine          ctermbg=0     cterm=NONE
 hi MatchParen          ctermfg=0     ctermbg=3
 hi ColorColumn         ctermbg=0
-hi LineNr              ctermfg=0     ctermbg=NONE
+hi LineNr              ctermfg=2     ctermbg=NONE
 hi Visual              ctermfg=7     ctermbg=0
 hi IncSearch           ctermfg=0     ctermbg=3    cterm=NONE
 hi Search              ctermfg=0     ctermbg=3

@@ -89,3 +89,9 @@ WiFi
 mutex
 y
 Pthreads
+egrep
+regex
+OpenMP
+parallelizeable
+MPI
+recv
