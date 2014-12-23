@@ -117,7 +117,7 @@ endif
 let g:syntastic_tex_checkers=[]
 
 " tell syntastic where more include files are...
-let g:syntastic_c_include_dirs = [ '/usr/include/guile/2.0/', '/usr/include/python3.4m/' ]
+let g:syntastic_c_include_dirs = [ '/usr/include/guile/2.0/', '/usr/include/python3.4m/', '/usr/include/x86_64-linux-gnu/qt5/QtWidgets/' ]
 
 " turn off paredit in slimv
 let g:paredit_mode=0
