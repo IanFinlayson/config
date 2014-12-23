@@ -22,7 +22,7 @@ export SHELL='/bin/zsh'
 export PROMPT='[%n@%m %c]$ '
 
 # enable color support of ls and also add handy aliases
-alias ls='ls --color=always'
+alias ls='ls --color=auto'
 alias ll='ls -l'
 alias la='ls -a'
 
