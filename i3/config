@@ -10,32 +10,26 @@ set $mod Mod4
 # use terminus for the window titles and status bar
 font pango:Terminus 12
 
-# launch feh to show wallpaper
-exec --no-startup-id feh --bg-scale /home/finlayson/imgs/f18.png
-
 # launch screensaver
 exec --no-startup-id xscreensaver -no-splash
-
-# launch clipboard tool
-exec --no-startup-id klipper
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec konsole
+bindsym $mod+Return exec xfce4-terminal
 
 # start chrome 
 bindsym $mod+b exec google-chrome-stable
 
 # start file manager 
-bindsym $mod+m exec dolphin
+bindsym $mod+m exec Thunar
 
 # kill focused window
 bindsym $mod+c kill
 
 # take a screenshot
-bindsym $mod+Print exec ksnapshot
+bindsym $mod+Print exec xfce4-screenshooter
 
 # launch dmenu launcher
 bindsym $mod+p exec dmenu_run -i -nb '#000000' -sb '#1792d0' -fn '-xos4-terminus-medium-r-*-*-18-*'
@@ -120,8 +114,8 @@ bindsym $mod+Shift+r restart
 # lock the screen
 bindsym $mod+z exec xscreensaver-command -lock
 
-# exit i3 without prompt
-bindsym $mod+Shift+e exec i3-msg exit
+# logout
+bindsym $mod+Shift+e exec xfce4-session-logout
 
 # resize window (you can also use the mouse for that)
 # These bindings trigger as soon as you enter the resize mode

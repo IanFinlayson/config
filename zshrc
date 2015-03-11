@@ -44,10 +44,10 @@ alias gcc='gcc -W -Wall -g'
 alias history='history 1'
 
 # a shorter command to launch emacs
-alias e='emacs'
+alias e='emacs -nw'
 
 # open any file on the command line with the program that makes sense
-alias o='kde-open'
+alias o='xdg-open'
 
 # always color grep results
 alias grep='grep --color=always'
@@ -91,9 +91,6 @@ fancy-ctrl-z () {
 }
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
-
-# add emacs custom install to path
-export PATH=/home/finlayson/source/emacs-24.3/src:$PATH
 
 # set android home
 export ANDROID_HOME="/home/finlayson/sources/android-sdk-linux/"

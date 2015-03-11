@@ -32,6 +32,9 @@ set sw=2
 set expandtab
 set cindent
 
+" this one makes indentation of switch cases less intense?
+set cinoptions=l1
+
 " make vim not expand tabs for Makefiles
 autocmd FileType make set noexpandtab
 
@@ -117,7 +120,9 @@ endif
 let g:syntastic_tex_checkers=[]
 
 " tell syntastic where more include files are...
-let g:syntastic_c_include_dirs = [ '/usr/include/guile/2.0/', '/usr/include/python3.4m/', '/usr/include/x86_64-linux-gnu/qt5/QtWidgets/' ]
+let g:syntastic_c_include_dirs = [ '/usr/include/guile/2.0/', '/usr/include/python3.4m/']
+
+let g:syntastic_cpp_include_dirs = [ '/usr/include/x86_64-linux-gnu/qt5/QtWidgets/' ]
 
 " turn off paredit in slimv
 let g:paredit_mode=0

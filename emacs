@@ -1,24 +1,12 @@
 ; .emacs file
 
-; add MELPA package reposItory
-(require 'package)
-(package-initialize)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
-
-; make emacs follow symlinks
-(setq vc-follow-symlinks nil)
-
-; load a nice color scheme
-(load-theme 'solarized-dark t)
-
 ; make emacs save backups in a central place
 (setq backup-directory-alist `(("." . "~/.saves")))
 (setq auto-save-file-name-transforms `((".*" "~/.saves" t)))
 (setq backup-by-copying t)
 
-; turn on Vim emulation!
-(require 'evil)
-(evil-mode 1)
+; make emacs follow symlinks
+(setq vc-follow-symlinks nil)
 
 ; turn off the ridiculous menu bar
 (menu-bar-mode -1)
@@ -43,20 +31,41 @@
 ; use a sane indentation for C code
 (setq c-default-style "k&r" c-basic-offset 4)
 
+; expand tabs into spaces!
+(setq indent-tabs-mode nil)
+(setq-default indent-tabs-mode nil)
+
+; list the packages I need
+(setq package-list '(evil smart-tab saveplace))
+
+; add MELPA package reposItory
+(setq package-archives '(("elpa" . "http://tromey.com/elpa/")
+                         ("gnu" . "http://elpa.gnu.org/packages/")
+                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+
+; activate packages
+(package-initialize)
+
+; fetch the list of packages available 
+(unless package-archive-contents
+  (package-refresh-contents))
+
+; install all missing packages
+(dolist (package package-list)
+  (unless (package-installed-p package)
+    (package-install package)))
+
+; turn on Vim emulation!
+(require 'evil)
+(evil-mode 1)
+
 ; make emacs start where I left off
+(require 'saveplace)
 (setq save-place-file "~/.emacsinfo")
 (setq-default save-place t)
-(require 'saveplace)
 
 ; make the tab key complete if at end of a word
 (require 'smart-tab)
 (global-smart-tab-mode 1)
 
-; expand tabs into spaces!
-(setq indent-tabs-mode nil)
-(setq-default indent-tabs-mode nil)
-
-; setup SLIME
-(require 'slime-autoloads)
-(setq inferior-lisp-program "/usr/bin/sbcl")
 
