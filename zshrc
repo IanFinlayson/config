@@ -73,7 +73,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
 
 # make colors nice
 eval `dircolors ~/.dircolors`
-export TERM='xterm'
+export TERM='xterm-256color'
 
 # make ctrl-z on the command line go back to the suspended process
 # this lets me use ctrl-z to swap between shell and eg Vim
