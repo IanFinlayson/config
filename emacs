@@ -36,7 +36,7 @@
 (setq-default indent-tabs-mode nil)
 
 ; list the packages I need
-(setq package-list '(evil smart-tab saveplace))
+(setq package-list '(evil smart-tab saveplace ample-theme))
 
 ; add MELPA package reposItory
 (setq package-archives '(("elpa" . "http://tromey.com/elpa/")
@@ -67,4 +67,8 @@
 ; make the tab key complete if at end of a word
 (require 'smart-tab)
 (global-smart-tab-mode 1)
+
+; set the color theme
+(load-theme 'ample t)
+(enable-theme 'ample)
 
