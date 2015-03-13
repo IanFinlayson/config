@@ -36,7 +36,7 @@
 (setq-default indent-tabs-mode nil)
 
 ; list the packages I need
-(setq package-list '(evil smart-tab saveplace ample-theme))
+(setq package-list '(evil smart-tab saveplace))
 
 ; add MELPA package reposItory
 (setq package-archives '(("elpa" . "http://tromey.com/elpa/")
@@ -68,7 +68,31 @@
 (require 'smart-tab)
 (global-smart-tab-mode 1)
 
-; set the color theme
-(load-theme 'ample t)
-(enable-theme 'ample)
+; my color theme
+
+(deftheme ians
+  "My own Emacs color theme")
+(let ((class '((class color) (min-colors 8))))
+  (custom-theme-set-faces
+   'ians
+
+   ;normal stuff
+   `(default ((,class (:background "darkblack" :foreground "white"))))
+   `(cursor ((,class (:background "green" :forefround "green"))))
+   `(fringe ((,class (:background "none" :foreground "green"))))
+   ; special stuff
+   `(font-lock-builtin-face ((,class (:foreground "blue"))))
+   `(font-lock-constant-face ((,class (:foreground "cyan"))))
+   `(font-lock-keyword-face ((,class (:foreground "blue"))))
+   `(font-lock-string-face ((,class (:foreground "cyan"))))
+   `(font-lock-comment-face ((,class (:foreground "green"))))
+   `(font-lock-warning-face ((,class (:foreground "red"))))
+   `(font-lock-type-face ((,class (:foreground "yellow"))))
+   `(font-lock-variable-name-face ((,class (:foreground "white"))))
+   `(font-lock-function-name-face ((,class (:foreground "white"))))
+   `(font-lock-constant-face ((,class (:foreground "cyan"))))
+   `(font-lock-warning-face ((,class (:foreground "red"))))))
+
+(provide-theme 'ians)
+
 
