@@ -15,7 +15,6 @@ function! SynStack()
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
 
-
 " prettify
 set number
 set cursorline
@@ -25,6 +24,26 @@ colorscheme ians
 
 " don't worry about old vi cruft
 set nocompatible
+
+" set the runtime path to include Vundle and initialize
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" use vundle itself
+Plugin 'gmarik/Vundle.vim'
+
+" syntastic checker
+Plugin 'scrooloose/syntastic'
+
+" supertab
+Plugin 'ervandew/supertab'
+
+" more plugins here maybe
+
+" finish with the plugins
+call vundle#end()
+filetype plugin indent on
 
 " tab options
 set ts=2
@@ -118,19 +137,6 @@ endif
 
 " disable syntastic for Latex
 let g:syntastic_tex_checkers=[]
-
-" tell syntastic where more include files are...
-let g:syntastic_c_include_dirs = [ '/usr/include/guile/2.0/', '/usr/include/python3.4m/']
-
-let g:syntastic_cpp_include_dirs = [ '/usr/include/x86_64-linux-gnu/qt5/QtWidgets/' ]
-
-" turn off paredit in slimv
-let g:paredit_mode=0
-
-let g:slimv_disable_scheme=1
-
-" setup pathogen bundler
-call pathogen#infect()
 
 " start centered on screen
 autocmd VimEnter * :normal zz
