@@ -39,6 +39,12 @@ Plugin 'scrooloose/syntastic'
 " supertab
 Plugin 'ervandew/supertab'
 
+" basic clojure stuff
+Plugin 'guns/vim-clojure-static'
+
+" fireplace for clojure
+Plugin 'tpope/vim-fireplace'
+
 " more plugins here maybe
 
 " finish with the plugins
