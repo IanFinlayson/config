@@ -162,3 +162,5 @@ bar {
     }
 }
 
+for_window [class="Xfce4-appfinder"] floating enable
+
