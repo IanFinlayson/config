@@ -87,6 +87,12 @@ nmap <Leader>s :set spell!<CR>
 " space-p toggles copy/paste mode
 nmap <Leader>p :set paste!<CR>:set number!<CR>
 
+" bring up the command history window on colon colon
+nnoremap :: q:
+
+" make history size bigger
+set history=1000
+
 " abbreviations
 ab tumw The University of Mary Washington
 ab iff Ian Finlayson
@@ -147,4 +153,6 @@ let g:syntastic_tex_checkers=[]
 " start centered on screen
 autocmd VimEnter * :normal zz
 
+" tell syntastic about some non standard paths
+let g:syntastic_c_include_dirs = ['/usr/include/SDL2']
 

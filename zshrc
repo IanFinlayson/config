@@ -47,7 +47,7 @@ alias history='history 1'
 alias e='emacs -nw'
 
 # open any file on the command line with the program that makes sense
-alias o='xdg-open'
+#alias o='xdg-open'
 
 # always color grep results
 alias grep='grep --color=always'
@@ -88,8 +88,8 @@ fancy-ctrl-z () {
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
-# set android home
-export ANDROID_HOME="/home/finlayson/sources/android-sdk-linux/"
+# set the path up
+export PATH=/home/finlayson/bin:/home/finlayson/source/emacs-24.3/src:/opt/android-studio/bin:/usr/local/netbeans-8.0.2/bin:$PATH:.
 
-# add emacs to the path
-export PATH=/home/finlayson/bin:/home/finlayson/source/emacs-24.3/src:$PATH:.
+
+
