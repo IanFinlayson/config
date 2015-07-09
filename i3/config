@@ -34,8 +34,8 @@ bindsym $mod+c kill
 # take a screenshot
 bindsym $mod+Print exec xfce4-screenshooter
 
-# launch dmenu launcher
-bindsym $mod+p exec dmenu_run -i -nb '#000000' -sb '#1792d0' -fn '-xos4-terminus-medium-r-*-*-18-*'
+# launch app finder
+bindsym $mod+p exec xfce4-appfinder
 
 # change focus - use correct Vim keys!
 bindsym $mod+h focus left
