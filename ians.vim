@@ -91,3 +91,9 @@ hi htmlTag      ctermfg=4
 hi htmlEndTag   ctermfg=4
 hi htmlLink     ctermfg=7 cterm=underline
 
+" diff stuff
+highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=none
+highlight DiffDelete cterm=bold ctermfg=10 ctermbg=none
+highlight DiffChange cterm=bold ctermfg=10 ctermbg=none
+highlight DiffText   cterm=bold ctermfg=10 ctermbg=1
+
