@@ -18,6 +18,12 @@ endfunc
 " prettify
 set number
 set cursorline
+"if exists('+colorcolumn')
+"  set colorcolumn=80
+"else
+"  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+"endif
+
 set background=dark
 syntax on
 colorscheme ians
@@ -44,6 +50,9 @@ Plugin 'guns/vim-clojure-static'
 
 " fireplace for clojure
 Plugin 'tpope/vim-fireplace'
+
+" vim indent object
+Plugin 'michaeljsmith/vim-indent-object'
 
 " more plugins here maybe
 
@@ -87,6 +96,12 @@ nmap <Leader>s :set spell!<CR>
 " space-p toggles copy/paste mode
 nmap <Leader>p :set paste!<CR>:set number!<CR>
 
+" bring up the command history window on colon colon
+nnoremap :: q:
+
+" make history size bigger
+set history=1000
+
 " abbreviations
 ab tumw The University of Mary Washington
 ab iff Ian Finlayson
@@ -122,6 +137,7 @@ ab hdlist <ul><CR><li><p><b>!cursor!</b></p><p><CR><CR><CR></p></li><CR><li><p><
 au BufRead,BufNewFile *.go set filetype=go
 au BufRead,BufNewFile *.rkt,*.rktl  set filetype=racket
 au BufRead,BufNewFile *.ttr set filetype=tetra
+au BufRead,BufNewFile *.e set filetype=eagle
 
 " use wrapping and spell check on text files
 au BufRead,BufNewFile *.txt set textwidth=80 spell noai nocindent
@@ -129,7 +145,7 @@ au BufRead,BufNewFile *.txt set textwidth=80 spell noai nocindent
 " use spell check on HTML, mark down, and LaTeX
 au BufRead,BufNewFile *.html set spell noai nocindent inde=
 au BufRead,BufNewFile *.html NoMatchParen
-au BufRead,BufNewFile *.tex set spell noai nocindent
+au BufRead,BufNewFile *.tex set spell noai nocindent textwidth=80
 au BufRead,BufNewFile *.md set textwidth=80 spell noai nocindent
 
 " don't use C indenting for Python, it's awful
@@ -147,4 +163,6 @@ let g:syntastic_tex_checkers=[]
 " start centered on screen
 autocmd VimEnter * :normal zz
 
+" tell syntastic about some non standard paths
+let g:syntastic_c_include_dirs = ['/usr/include/SDL2']
 

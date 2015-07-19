@@ -47,17 +47,16 @@ alias history='history 1'
 alias e='emacs -nw'
 
 # open any file on the command line with the program that makes sense
-alias o='xdg-open'
+#alias o='xdg-open'
 
 # always color grep results
-alias grep='grep --color=always'
+alias grep='grep --color=auto'
 
 # my tasks program
 alias vtasks='python2 ~/vtasks/vtasks.py'
 
 # go to machines I use a lot
-alias rose='ssh rosemary.umw.edu'
-alias cin='ssh cinnamon.umw.edu'
+alias cs='ssh cs.umw.edu'
 
 # shut the hell up evince
 alias evince='evince 1>/dev/null 2>/dev/null'
@@ -88,8 +87,9 @@ fancy-ctrl-z () {
 zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
-# set android home
-export ANDROID_HOME="/home/finlayson/sources/android-sdk-linux/"
+# set the path up
+export PATH=/opt/android-studio/bin:/usr/local/netbeans-8.0.2/bin:/opt/Qt/5.5/gcc_64/bin:$PATH
+export PATH=/home/finlayson/bin:$PATH:.
 
-# add emacs to the path
-export PATH=/home/finlayson/bin:/home/finlayson/source/emacs-24.3/src:$PATH:.
+
+
