@@ -93,3 +93,8 @@ export PATH=/home/finlayson/bin:$PATH:.
 
 
 
+
+# temporary for 225
+exec -l bash
+
+
