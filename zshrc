@@ -19,7 +19,7 @@ bindkey "^[[3~" delete-char
 # basics
 export EDITOR='vim'
 export SHELL='/bin/zsh'
-export PROMPT='[%n@%m %c]$ '
+export PROMPT='[%n@cs %c]$ '
 
 # enable color support of ls and also add handy aliases
 alias ls='ls --color=auto'
@@ -85,5 +85,10 @@ bindkey '^Z' fancy-ctrl-z
 export PATH=/usr/local/netbeans-8.0.2/bin:/opt/Qt/5.5/gcc_64/bin:$PATH
 export PATH=/home/finlayson/bin:$PATH:.
 
+
+
+
+# temporary for 225
+exec -l bash
 
 

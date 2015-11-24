@@ -160,11 +160,11 @@ if has("autocmd")
  \| exe "normal! g'\"" | endif
 endif
 
-" disable syntastic for Latex
-let g:syntastic_tex_checkers=[]
-
 " start centered on screen
 autocmd VimEnter * :normal zz
+
+" disable syntastic for Latex
+let g:syntastic_tex_checkers=[]
 
 " tell syntastic about some non standard paths
 let g:syntastic_c_include_dirs = ['/usr/include/SDL2']
