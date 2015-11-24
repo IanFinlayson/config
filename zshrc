@@ -85,10 +85,3 @@ bindkey '^Z' fancy-ctrl-z
 export PATH=/usr/local/netbeans-8.0.2/bin:/opt/Qt/5.5/gcc_64/bin:$PATH
 export PATH=/home/finlayson/bin:$PATH:.
 
-
-
-
-# temporary for 225
-exec -l bash
-
-
