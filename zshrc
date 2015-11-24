@@ -2,8 +2,8 @@
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 bindkey -v
 zstyle :compinstall filename '/home/finlayson/.zshrc'
 
@@ -43,13 +43,7 @@ alias gcc='gcc -W -Wall -g'
 # show more history
 alias history='history 1'
 
-# a shorter command to launch emacs
-alias e='emacs -nw'
-
-# open any file on the command line with the program that makes sense
-#alias o='xdg-open'
-
-# always color grep results
+# color grep results
 alias grep='grep --color=auto'
 
 # my tasks program
@@ -88,7 +82,7 @@ zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
 # set the path up
-export PATH=/opt/android-studio/bin:/usr/local/netbeans-8.0.2/bin:/opt/Qt/5.5/gcc_64/bin:$PATH
+export PATH=/usr/local/netbeans-8.0.2/bin:/opt/Qt/5.5/gcc_64/bin:$PATH
 export PATH=/home/finlayson/bin:$PATH:.
 
 
