@@ -19,7 +19,7 @@ bindkey "^[[3~" delete-char
 # basics
 export EDITOR='vim'
 export SHELL='/bin/zsh'
-export PROMPT='[%n@cs %c]$ '
+export PROMPT='[%n@%m %c]$ '
 
 # enable color support of ls and also add handy aliases
 alias ls='ls --color=auto'
