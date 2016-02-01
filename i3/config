@@ -162,5 +162,6 @@ bar {
     }
 }
 
+# set the app finder to float
 for_window [class="Xfce4-appfinder"] floating enable
 
