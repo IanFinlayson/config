@@ -1,12 +1,21 @@
-# Ian Finlayson's bash rc
+# Ian Finlayson's zsh rc
+
+# auto completion
+autoload -U compinit
+compinit
+
+# make colors nice
+eval `dircolors ~/.dircolors`
+export TERM='xterm'
 
 # set up vim input mode
 set -o vi
+bindkey -v
 
 # basics
 export EDITOR='vim'
-export PS1="[\u@\h \W]\\$ \[$(tput sgr0)\]"
-export SHELL='/bin/bash'
+export SHELL='/bin/zsh'
+export PROMPT='[%n@%m %1~]$ '
 
 # enable color support of ls and also add handy aliases
 alias ls='ls --color=auto'
@@ -47,10 +56,6 @@ alias lpr='lpr -o sides=two-sided-long-edge'
 
 # search local lib for libraries (why is this not default?)
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
-
-# make colors nice
-eval `dircolors ~/.dircolors`
-export TERM='xterm'
 
 # set the path up
 export PATH=/home/finlayson/bin:$PATH:.
