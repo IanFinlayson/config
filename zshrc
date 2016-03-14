@@ -1,8 +1,28 @@
 # Ian Finlayson's zsh rc
 
+# setup history
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+
 # auto completion
+zstyle :compinstall filename '/home/finlayson/.zshrc'
 autoload -U compinit
 compinit
+
+# make ctrl-z on the command line go back to the suspended process
+# this lets me use ctrl-z to swap between shell and eg Vim
+fancy-ctrl-z () {
+  if [[ $#BUFFER -eq 0 ]]; then
+    fg
+    zle redisplay
+  else
+    zle push-input
+  fi
+}
+zle -N fancy-ctrl-z
+bindkey '^Z' fancy-ctrl-z
+
 
 # make colors nice
 eval `dircolors ~/.dircolors`
