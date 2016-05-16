@@ -42,9 +42,6 @@ alias ls='ls --color=auto'
 alias ll='ls -l'
 alias la='ls -a'
 
-# always allow X over ssh
-alias ssh='ssh -Y'
-
 # I like a clear screen
 alias l='clear;pwd;ls'
 alias c='clear'
@@ -64,6 +61,7 @@ alias vtasks='python2 ~/vtasks/vtasks.py'
 
 # go to machines I use a lot
 alias cs='ssh cs.umw.edu'
+alias htpc='ssh 73.177.239.11'
 
 # shut the hell up evince
 alias evince='evince 1>/dev/null 2>/dev/null'
