@@ -61,7 +61,7 @@ alias vtasks='python2 ~/vtasks/vtasks.py'
 
 # go to machines I use a lot
 alias cs='ssh cs.umw.edu'
-alias htpc='ssh 73.177.239.11'
+alias htpc='ssh finlayson.xyz'
 
 # shut the hell up evince
 alias evince='evince 1>/dev/null 2>/dev/null'
