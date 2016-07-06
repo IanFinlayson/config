@@ -1,6 +1,5 @@
 " Ian's Vim color scheme
 " only intended to be used with a 16-color terminal
-" I use the solarized palette
 
 set background=dark
 hi! clear
