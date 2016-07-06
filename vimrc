@@ -40,10 +40,6 @@ Plugin 'scrooloose/syntastic'
 " supertab
 Plugin 'ervandew/supertab'
 
-" more plugins here maybe
-
-
-
 
 
 " finish with the plugins
