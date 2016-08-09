@@ -1,14 +1,17 @@
-# Ian Finlayson's zsh rc
+# Path to your oh-my-zsh installation.
+export ZSH=/home/finlayson/.oh-my-zsh
 
-# setup history
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+ZSH_THEME="gallifrey"
 
-# auto completion
-zstyle :compinstall filename '/home/finlayson/.zshrc'
-autoload -U compinit
-compinit
+# which oh my zsh plugins to load
+plugins=(git catimg)
+
+# set up oh my zsh
+source $ZSH/oh-my-zsh.sh
 
 # make ctrl-z on the command line go back to the suspended process
 # this lets me use ctrl-z to swap between shell and eg Vim
@@ -35,7 +38,6 @@ bindkey -v
 # basics
 export EDITOR='vim'
 export SHELL='/bin/zsh'
-export PROMPT='[%n@%m %1~]$ '
 
 # enable color support of ls and also add handy aliases
 alias ls='ls --color=auto'
@@ -49,15 +51,8 @@ alias c='clear'
 # use real Vim no mater what I type
 alias vi='vim'
 
-# always make compiler strict
-alias g++='g++ -W -Wall -g'
-alias gcc='gcc -W -Wall -g'
-
 # always color grep results
 alias grep='grep --color=auto'
-
-# my tasks program
-alias vtasks='python2 ~/vtasks/vtasks.py'
 
 # go to machines I use a lot
 alias cs='ssh cs.umw.edu'
@@ -72,9 +67,6 @@ alias dia='dia --integrated'
 # always print two-sided
 alias lpr='lpr -o sides=two-sided-long-edge'
 
-# search local lib for libraries (why is this not default?)
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
-
 # set the path up
-export PATH=/home/finlayson/bin:$PATH:.
+export PATH=/home/finlayson/tetra/bin:/home/finlayson/bin:$PATH:.
 
