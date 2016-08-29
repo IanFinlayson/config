@@ -1,6 +1,20 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/home/finlayson/.oh-my-zsh
 
+
+HISTSIZE=10000
+SAVEHIST=10000
+
+setopt append_history
+setopt extended_history
+setopt hist_expire_dups_first
+setopt hist_ignore_dups
+setopt hist_ignore_space
+setopt hist_verify
+
+unsetopt inc_append_history
+unsetopt share_history
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -46,7 +60,7 @@ alias la='ls -a'
 
 # I like a clear screen
 alias l='clear;pwd;ls'
-alias c='clear'
+alias c='printf "\033c"'
 
 # use real Vim no mater what I type
 alias vi='vim'
