@@ -49,6 +49,9 @@ export TERM='xterm'
 set -o vi
 bindkey -v
 
+# use 4 spaces for tabs instead of 8
+tabs -4
+
 # basics
 export EDITOR='vim'
 export SHELL='/bin/zsh'
