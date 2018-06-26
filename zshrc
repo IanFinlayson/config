@@ -43,7 +43,7 @@ bindkey '^Z' fancy-ctrl-z
 
 # make colors nice
 eval `dircolors ~/.dircolors`
-#export TERM='xterm'
+export TERM='xterm'
 
 # set up vim input mode
 set -o vi
