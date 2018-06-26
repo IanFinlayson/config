@@ -1,6 +1,20 @@
 " .vimrc
 " Ian Finlayson's .vimrc
 
+
+" run a command on all mutt files to remove
+augroup autocom
+    autocmd!
+    " executes my command on quit
+     autocmd VimLeave /tmp/mutt-* !/home/finlayson/bin/email-process %
+augroup END
+
+
+
+
+
+
+
 " used for removing trailing space from abbreviations
 func Eatchar(pat)
   let c = nr2char(getchar(0))
@@ -40,8 +54,6 @@ Plugin 'scrooloose/syntastic'
 " supertab
 Plugin 'ervandew/supertab'
 
-
-
 " finish with the plugins
 call vundle#end()
 filetype plugin indent on
@@ -51,6 +63,9 @@ set ts=4
 set sw=4
 set expandtab
 set cindent
+
+" make Vim remember more lines in registers
+set viminfo='20,<1000
 
 " this one makes indentation of switch cases less intense?
 set cinoptions=l1

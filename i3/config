@@ -1,32 +1,36 @@
 # use only simple window borders, no title bar
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 0
 
 # change the focus color
-client.focused #1793d0 #1793d0 #111111
+client.focused #5294e2 #5294e2 #000000
 
 # set super as the modifier key
 set $mod Mod4
 
 # use terminus for the window titles and status bar
-font pango:Terminus 15px
+#font pango:Terminus 12px
+font -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
 
 # launch screensaver
 exec --no-startup-id xscreensaver -no-splash
 
+# launch mopidy
+exec --no-startup-id mopidy
+
 # launchy wallpaper
-exec --no-startup-id feh --bg-scale /home/finlayson/imgs/f12.png
+exec --no-startup-id feh --bg-scale /home/finlayson/imgs/mts.jpg
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec konsole
 
-# start chrome 
+# start browser 
 bindsym $mod+b exec firefox
 
 # start file manager 
-bindsym $mod+m exec Thunar
+bindsym $mod+m exec thunar
 
 # kill focused window
 bindsym $mod+c kill
@@ -36,6 +40,9 @@ bindsym $mod+Print exec xfce4-screenshooter
 
 # launch app finder
 bindsym $mod+p exec xfce4-appfinder
+
+# toogle sound
+bindsym $mod+q exec pamixer -t
 
 # change focus - use correct Vim keys!
 bindsym $mod+h focus left
@@ -154,11 +161,11 @@ bar {
     position top
     workspace_buttons yes
     colors {
-        background #000000
-        focused_workspace  #ffffff #1793d0
-        active_workspace   #ffffff #333333
+        background #353945
+        focused_workspace  #e7e8eb #5294e2
+        active_workspace   #e7e8eb #263238
         inactive_workspace #888888 #222222
-        urgent_workspace   #ffffff #900000
+        urgent_workspace   #eceff1 #900000
     }
 }
 
