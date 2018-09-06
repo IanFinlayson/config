@@ -1,19 +1,12 @@
 " .vimrc
 " Ian Finlayson's .vimrc
 
-
 " run a command on all mutt files to remove
 augroup autocom
     autocmd!
     " executes my command on quit
      autocmd VimLeave /tmp/mutt-* !/home/finlayson/bin/email-process %
 augroup END
-
-
-
-
-
-
 
 " used for removing trailing space from abbreviations
 func Eatchar(pat)
@@ -96,6 +89,9 @@ nmap <Leader>s :set spell!<CR>
 
 " space-p toggles copy/paste mode
 nmap <Leader>p :set paste!<CR>:set number!<CR>
+
+"  corrects a word
+map qw z=1<CR><CR>
 
 " make history size bigger
 set history=1000

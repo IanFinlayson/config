@@ -76,16 +76,13 @@ alias grep='grep --color=auto'
 
 # go to machines I use a lot
 alias cs='ssh cs.umw.edu'
-alias srv='ssh finlaysoni@ianfinlayson.net'
+alias srv='ssh ifinlay@ianfinlayson.net'
 
 # shut the hell up evince
 alias evince='evince 1>/dev/null 2>/dev/null'
 
 # make dia use only one window
 alias dia='dia --integrated'
-
-# I can't type the whole thing
-alias mutt='neomutt'
 
 # always print two-sided
 alias lpr='lpr -o sides=two-sided-long-edge'

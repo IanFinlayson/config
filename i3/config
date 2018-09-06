@@ -1,5 +1,5 @@
 # use only simple window borders, no title bar
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 2
 
 # change the focus color
 client.focused #5294e2 #5294e2 #000000
@@ -8,23 +8,23 @@ client.focused #5294e2 #5294e2 #000000
 set $mod Mod4
 
 # use terminus for the window titles and status bar
-#font pango:Terminus 12px
-font -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
+font pango:Terminus 19px
+#font -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
 
 # launch screensaver
 exec --no-startup-id xscreensaver -no-splash
 
-# launch mopidy
-exec --no-startup-id mopidy
-
 # launchy wallpaper
 exec --no-startup-id feh --bg-scale /home/finlayson/imgs/mts.jpg
+
+# set the keymap to international
+exec --no-startup-id setxkbmap -variant altgr-intl
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec konsole
+bindsym $mod+Return exec xfce4-terminal
 
 # start browser 
 bindsym $mod+b exec firefox
@@ -42,7 +42,7 @@ bindsym $mod+Print exec xfce4-screenshooter
 bindsym $mod+p exec xfce4-appfinder
 
 # toogle sound
-bindsym $mod+q exec pamixer -t
+bindsym $mod+q exec amixer set Master toggle
 
 # change focus - use correct Vim keys!
 bindsym $mod+h focus left
