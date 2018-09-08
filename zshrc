@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/finlayson/.oh-my-zsh
+export ZSH=/home/ifinlay/.oh-my-zsh
 
 # history options
 HISTSIZE=10000
@@ -42,7 +42,6 @@ zle -N fancy-ctrl-z
 bindkey '^Z' fancy-ctrl-z
 
 # make colors nice
-eval `dircolors ~/.dircolors`
 export TERM='xterm'
 
 # set up vim input mode
@@ -88,7 +87,7 @@ alias dia='dia --integrated'
 alias lpr='lpr -o sides=two-sided-long-edge'
 
 # set the path up
-export PATH=/home/finlayson/tetra/bin:/home/finlayson/bin:$PATH:.
+export PATH=/home/ifinlay/tetra/bin:/home/ifinlay/bin:$PATH:.
 
 # shared history between terminals is horrid
 unsetopt share_history
