@@ -66,15 +66,12 @@ alias c='printf "\033c"'
 
 # use real Vim no mater what I type
 alias vi='vim'
-
-# my todo list program
-alias vt='python2 ~/vtasks/vtasks.py'
+alias e='emacs -nw'
 
 # always color grep results
 alias grep='grep --color=auto'
 
 # go to machines I use a lot
-alias cs='ssh cs.umw.edu'
 alias srv='ssh ifinlay@ianfinlayson.net'
 
 # shut the hell up evince
@@ -87,7 +84,7 @@ alias dia='dia --integrated'
 alias lpr='lpr -o sides=two-sided-long-edge'
 
 # set the path up
-export PATH=/home/ifinlay/tetra/bin:/home/ifinlay/bin:$PATH:.
+export PATH=/home/ifinlay/Bin:$PATH:.
 
 # shared history between terminals is horrid
 unsetopt share_history

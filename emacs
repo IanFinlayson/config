@@ -15,9 +15,6 @@
 (global-linum-mode 1)
 (setq linum-format "%d ")
 
-; turn off the mode line
-(setq-default mode-line-format nil) 
-
 ; turn off the annoying popups
 (setq inhibit-startup-echo-area-message t)
 (setq inhibit-startup-message t)
@@ -36,12 +33,11 @@
 (setq-default indent-tabs-mode nil)
 
 ; list the packages I need
-(setq package-list '(evil smart-tab saveplace racket-mode))
+(setq package-list '(evil smart-tab cider))
 
 ; add MELPA package reposItory
-(setq package-archives '(("elpa" . "http://tromey.com/elpa/")
-                         ("gnu" . "http://elpa.gnu.org/packages/")
-                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+                         ("melpa" . "https://melpa.org/packages/")))
 
 ; activate packages
 (package-initialize)
@@ -58,11 +54,6 @@
 ; turn on Vim emulation!
 (require 'evil)
 (evil-mode 1)
-
-; make emacs start where I left off
-(require 'saveplace)
-(setq save-place-file "~/.emacsinfo")
-(setq-default save-place t)
 
 ; make the tab key complete if at end of a word
 (require 'smart-tab)
@@ -96,3 +87,15 @@
 (provide-theme 'ians)
 
 
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages '(smart-tab evil)))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
