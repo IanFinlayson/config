@@ -5,7 +5,7 @@
 augroup autocom
     autocmd!
     " executes my command on quit
-     autocmd VimLeave /tmp/mutt-* !/home/finlayson/bin/email-process %
+     autocmd VimLeave /tmp/mutt-* !/home/ifinlay/bin/email-process %
 augroup END
 
 " used for removing trailing space from abbreviations
@@ -60,7 +60,7 @@ set cindent
 " make Vim remember more lines in registers
 set viminfo='20,<1000
 
-" this one makes indentation of switch cases less intense?
+" this one makes indentation of switch cases less intense
 set cinoptions=l1
 
 " make vim not expand tabs for Makefiles
@@ -112,6 +112,7 @@ ab cppt <ESC>:set paste<CR>i#include <iostream><CR>using namespace std;<CR><CR>i
 
 " java template
 ab javat <ESC>:set paste<CR>ipublic class <C-R>=expand("%:t:r")<CR> {<CR>    public static void main(String args[]) {<CR>       !cursor!<CR><CR><CR>    }<CR>}<CR><ESC>:set nopaste<CR>?!cursor!<CR>cf!
+ab sop System.out.println
 
 " LaTeX niceties
 ab titems \begin{itemize}<CR>\item!cursor!<CR>\item <CR>\item <CR>\end{itemize}<ESC>?!cursor!<CR>cf!
@@ -124,7 +125,7 @@ ab tverb \begin{verbatim}<CR>!cursor!<CR>\end{verbatim}<ESC>?!cursor!<CR>cf!<C-R
 " HTML
 ab hul <ul><CR><li>!cursor!</li><CR><li></li><CR><li></li><CR></ul><CR><ESC>?!cursor!<CR>cf!<C-R>=Eatchar('\s')<CR>
 ab hol <ol><CR><li>!cursor!</li><CR><li></li><CR><li></li><CR></ol><CR><ESC>?!cursor!<CR>cf!<C-R>=Eatchar('\s')<CR>
-ab hsec <hr /><CR><h3>!cursor!</h3><CR><CR><CR><ESC>?!cursor!<CR>cf!<C-R>=Eatchar('\s')<CR>
+ab hsec <hr /><CR><h2>!cursor!</h2><CR><CR><CR><ESC>?!cursor!<CR>cf!<C-R>=Eatchar('\s')<CR>
 ab hdlist <ul><CR><li><p><b>!cursor!</b></p><p><CR><CR><CR></p></li><CR><li><p><b></b></p><p><CR><CR><CR></p></li><CR><li><p><b></b></p><p><CR><CR><CR></p></li></ul><CR><ESC>?!cursor!<CR>cf!<C-R>=Eatchar('\s')<CR>
 
 " syntax files
@@ -141,7 +142,7 @@ au BufRead,BufNewFile *.html NoMatchParen
 au BufRead,BufNewFile *.tex set spell noai nocindent
 au BufRead,BufNewFile *.md set textwidth=80 spell noai nocindent
 
-" don't use C indenting for Python, it's awful
+" don't use C indenting for Python
 au BufRead,BufNewFile *.py set autoindent nocindent
 
 " make vim jump to last position in file
@@ -150,9 +151,14 @@ if has("autocmd")
  \| exe "normal! g'\"" | endif
 endif
 
-" disable syntastic for Latex
+" disable syntastic for Latex and Java
 let g:syntastic_tex_checkers=[]
+let g:syntastic_java_checkers=[]
 
 " start centered on screen
 autocmd VimEnter * :normal zz
+
+" disable auto-continuation of comments with o/O commands
+nnoremap o yyp^c$
+nnoremap O yyP^c$
 

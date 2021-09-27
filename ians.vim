@@ -12,11 +12,11 @@ let colors_name="ians"
 
 " Basic ui stuff
 hi Cursor              ctermfg=7     ctermbg=1
-hi CursorLine          ctermbg=0     cterm=NONE
+hi CursorLine          cterm=underline
 hi MatchParen          ctermfg=0     ctermbg=3
 hi ColorColumn         ctermbg=0
 hi LineNr              ctermfg=2     ctermbg=NONE
-hi Visual              ctermfg=7     ctermbg=0
+hi Visual              ctermfg=7     ctermbg=0    term=reverse cterm=reverse
 hi IncSearch           ctermfg=0     ctermbg=3    cterm=NONE
 hi Search              ctermfg=0     ctermbg=3
 hi StatusLine          ctermfg=7     ctermbg=2     cterm=NONE

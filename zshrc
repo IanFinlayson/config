@@ -20,13 +20,16 @@ bindkey "^[[3~" delete-char
 CASE_SENSITIVE="true"
 
 # Set name of the theme to load.
-ZSH_THEME="gallifrey"
+ZSH_THEME="fishy"
 
 # which oh my zsh plugins to load
 plugins=(git catimg)
 
 # set up oh my zsh
 source $ZSH/oh-my-zsh.sh
+
+# why does oh my zsh turn this on??
+unsetopt auto_pushd
 
 # make ctrl-z on the command line go back to the suspended process
 # this lets me use ctrl-z to swap between shell and eg Vim
@@ -85,6 +88,9 @@ alias dia='dia --integrated'
 
 # always print two-sided
 alias lpr='lpr -o sides=two-sided-long-edge'
+
+# shorten this up
+alias py='python3'
 
 # set the path up
 export PATH=/home/ifinlay/tetra/bin:/home/ifinlay/bin:$PATH:.
