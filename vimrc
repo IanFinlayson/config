@@ -47,6 +47,9 @@ Plugin 'scrooloose/syntastic'
 " supertab
 Plugin 'ervandew/supertab'
 
+" Racket support
+Plugin 'wlangstroth/vim-racket'
+
 " finish with the plugins
 call vundle#end()
 filetype plugin indent on
@@ -154,6 +157,7 @@ endif
 " disable syntastic for Latex and Java
 let g:syntastic_tex_checkers=[]
 let g:syntastic_java_checkers=[]
+let g:syntastic_enable_racket_racket_checker=1
 
 " start centered on screen
 autocmd VimEnter * :normal zz

@@ -2,23 +2,30 @@
 for_window [class="^.*"] border pixel 2
 
 # change the focus color
-client.focused #5294e2 #5294e2 #000000
+client.focused #66d9ef #66d9ef #000000
 
 # set super as the modifier key
 set $mod Mod4
 
 # use terminus for the window titles and status bar
-font pango:Terminus 19px
+font pango:Hack 12
 #font -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
 
 # launch screensaver
 exec --no-startup-id xscreensaver -no-splash
 
-# launchy wallpaper
-exec --no-startup-id feh --bg-scale /home/finlayson/imgs/mts.jpg
+# launch wallpaper
+exec --no-startup-id feh --bg-scale /home/ifinlay/Pictures/another-world.jpg
 
-# set the keymap to international
-exec --no-startup-id setxkbmap -variant altgr-intl
+# set up the siji icon font (used by polybar)
+exec --no-startup-id xset +fp /home/ifinlay/.local/share/fonts
+exec --no-startup-id xset fp rehash
+
+# run our mod map which sets right-alt as compose key
+exec --no-startup-id xmodmap ~/.Xmodmap
+
+# launch polybar for the top
+exec_always --no-startup-id ~/.i3/polybar.sh &
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -42,7 +49,7 @@ bindsym $mod+Print exec xfce4-screenshooter
 bindsym $mod+p exec xfce4-appfinder
 
 # toogle sound
-bindsym $mod+q exec amixer set Master toggle
+bindsym $mod+q exec amixer -q -D pulse sset Master toggle
 
 # change focus - use correct Vim keys!
 bindsym $mod+h focus left
@@ -124,10 +131,6 @@ bindsym $mod+Shift+r restart
 # lock the screen
 bindsym $mod+z exec xscreensaver-command -lock
 
-# logout
-bindsym Mod4+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-
-
 # resize window (you can also use the mouse for that)
 # These bindings trigger as soon as you enter the resize mode
 mode "resize" {
@@ -153,21 +156,6 @@ mode "resize" {
 
 # meta-r enters resize mode
 bindsym $mod+r mode "resize"
-
-# Start i3bar to display a workspace bar using i3
-# finds out, if available)
-bar {
-    status_command i3blocks
-    position top
-    workspace_buttons yes
-    colors {
-        background #353945
-        focused_workspace  #e7e8eb #5294e2
-        active_workspace   #e7e8eb #263238
-        inactive_workspace #888888 #222222
-        urgent_workspace   #eceff1 #900000
-    }
-}
 
 # set the app finder to float
 for_window [class="Xfce4-appfinder"] floating enable
