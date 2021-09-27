@@ -8,14 +8,14 @@ client.focused #66d9ef #66d9ef #000000
 set $mod Mod4
 
 # use terminus for the window titles and status bar
-font pango:Terminus 19px
+font pango:Hack 12
 #font -xos4-terminus-medium-*-*-*-14-*-*-*-*-*-*-*
 
 # launch screensaver
 exec --no-startup-id xscreensaver -no-splash
 
 # launch wallpaper
-exec --no-startup-id feh --bg-scale /home/ifinlay/Pictures/mts.png
+exec --no-startup-id feh --bg-scale /home/ifinlay/Pictures/another-world.jpg
 
 # set up the siji icon font (used by polybar)
 exec --no-startup-id xset +fp /home/ifinlay/.local/share/fonts
